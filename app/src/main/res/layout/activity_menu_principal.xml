@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menuPrincipal">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FisioterapiApp"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="334dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="28dp"
+        android:text="Hola User                                                                                  Selecciona que deseas hacer: "
+        app:layout_constraintBottom_toTopOf="@+id/EjerciciosAsignados"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/EjerciciosAsignados"
+        android:layout_width="185dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="buttonEjerciciosAsignados"
+        android:text="Ejercicios Asignados"
+        app:layout_constraintBottom_toTopOf="@+id/VerEjercicios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/VerEjercicios"
+        android:layout_width="185dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="buttonVerEjercicios"
+        android:text="Ver Ejercicios"
+        app:layout_constraintBottom_toTopOf="@+id/Historial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Historial"
+        android:layout_width="185dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="buttonHistorial"
+        android:text="Historial"
+        app:layout_constraintBottom_toTopOf="@+id/Salir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Salir"
+        android:layout_width="185dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="104dp"
+        android:onClick="buttonSalir"
+        android:text="Salir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
