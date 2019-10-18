@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".asignados"></activity>
+        <activity android:name=".tobilloPies"></activity>
+        <activity android:name=".troncoCadera" />
+        <activity android:name=".manoMuneca" />
+        <activity android:name=".codoAntebrazo" />
+        <activity android:name=".hombros" />
+        <activity android:name=".Imagenes" />
+        <activity android:name=".cabezaCuello" />
+        <activity android:name=".asignados" />
         <activity android:name=".historial" />
         <activity android:name=".Ejercicios" />
         <activity android:name=".menuPrincipal" />
