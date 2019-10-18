@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.701" />
+        app:layout_constraintVertical_bias="0.56" />
 
     <TextView
         android:id="@+id/textoSaludo"
@@ -40,24 +40,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textoEjercicio"
-        android:layout_width="309dp"
-        android:layout_height="160dp"
-        android:layout_marginBottom="8dp"
-        android:text="Instrucciones"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/imagen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <ImageView
         android:id="@+id/imagen"
         android:layout_width="301dp"
         android:layout_height="179dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/unouno" />
+
+    <EditText
+        android:id="@+id/textoEjercicio"
+        android:layout_width="310dp"
+        android:layout_height="189dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Instrucciones"
+        app:layout_constraintBottom_toTopOf="@+id/imagen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

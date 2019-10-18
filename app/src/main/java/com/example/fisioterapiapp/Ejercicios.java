@@ -14,6 +14,36 @@ public class Ejercicios extends AppCompatActivity {
         setContentView(R.layout.activity_ejercicios);
     }
 
+    public void buttonCabezaCuello(View view){
+        Intent intent = new Intent(Ejercicios.this,cabezaCuello.class);
+        startActivity(intent);
+    }
+
+    public void buttonHombros(View view){
+        Intent intent = new Intent(Ejercicios.this,hombros.class);
+        startActivity(intent);
+    }
+
+    public void buttonCodoAntebrazo(View view){
+        Intent intent = new Intent(Ejercicios.this,codoAntebrazo.class);
+        startActivity(intent);
+    }
+
+    public void buttonManoMuneca(View view){
+        Intent intent = new Intent(Ejercicios.this,manoMuneca.class);
+        startActivity(intent);
+    }
+
+    public void buttonTroncoCadera(View view){
+        Intent intent = new Intent(Ejercicios.this,troncoCadera.class);
+        startActivity(intent);
+    }
+
+    public void buttonTobilloPies(View view){
+        Intent intent = new Intent(Ejercicios.this,tobilloPies.class);
+        startActivity(intent);
+    }
+
     public void buttonRegresar(View view){
         Intent intent = new Intent(Ejercicios.this,menuPrincipal.class);
         startActivity(intent);

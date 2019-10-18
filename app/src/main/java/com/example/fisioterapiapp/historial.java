@@ -17,4 +17,6 @@ public class historial extends AppCompatActivity {
         Intent intent = new Intent(historial.this, menuPrincipal.class);
         startActivity(intent);
     }
+
+
 }
