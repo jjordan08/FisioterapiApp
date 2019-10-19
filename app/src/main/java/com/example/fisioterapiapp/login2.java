@@ -46,12 +46,12 @@ public class login2 extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
                 if(mFirebaseUser !=null){
-                    Toast.makeText(login2.this, "You are logged in", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(login2.this, "ingresar", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(login2.this, menuPrincipal.class);
                     startActivity(i);
                 }
                 else {
-                    Toast.makeText(login2.this, "Please Login", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(login2.this, "Ingresa de nuevo", Toast.LENGTH_SHORT).show();
                 }
             }
         };
@@ -63,22 +63,22 @@ public class login2 extends AppCompatActivity {
                 String pwd = password.getText().toString();
 
                 if (emailID.isEmpty()){
-                    email.setError("Please enter email address");
+                    email.setError("Ingresa dirreción de correo");
                     email.requestFocus();
                 }
                 else if (pwd.isEmpty()){
-                    password.setError("Please enter password");
+                    password.setError("Ingresa yu contraseñña");
                     password.requestFocus();
                 }
                 else if (emailID.isEmpty() && pwd.isEmpty()){
-                    Toast.makeText(login2.this, "Fields Are Empty!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(login2.this, "completa los espacios vacios", Toast.LENGTH_SHORT).show();
                 }
                 else if (!(emailID.isEmpty() && pwd.isEmpty())){
                     mFirebaseAuth.signInWithEmailAndPassword(emailID,pwd).addOnCompleteListener(login2.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()){
-                                Toast.makeText(login2.this, "Login Failed, Please Login Again", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(login2.this, "el inicio fue invalido, por favor intenta de  nuevo", Toast.LENGTH_SHORT).show();
                             }
                             else {
                                 Intent i = new Intent(login2.this,menuPrincipal.class);
@@ -88,7 +88,7 @@ public class login2 extends AppCompatActivity {
                     });
                 }
                 else {
-                    Toast.makeText(login2.this, "Error Occurred!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(login2.this, "Ha ocurrido un error", Toast.LENGTH_SHORT).show();
                 }
             }
         });

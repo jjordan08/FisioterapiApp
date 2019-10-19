@@ -48,22 +48,22 @@ public class logIn extends AppCompatActivity {
                 String pwd = password.getText().toString();
 
                 if (emailID.isEmpty()){
-                    email.setError("Please enter email address");
+                    email.setError("Ingresa tu dirección de correo");
                     email.requestFocus();
                 }
                 else if (pwd.isEmpty()){
-                    password.setError("Please enter password");
+                    password.setError("Ingresa tu contraseña");
                     password.requestFocus();
                 }
                 else if (emailID.isEmpty() && pwd.isEmpty()){
-                    Toast.makeText(logIn.this, "Fields Are Empty!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(logIn.this, "Completa los espacios vacios", Toast.LENGTH_SHORT).show();
                 }
                 else if (!(emailID.isEmpty() && pwd.isEmpty())){
                     mFirebaseAuth.createUserWithEmailAndPassword(emailID,pwd).addOnCompleteListener(logIn.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()){
-                                Toast.makeText(logIn.this, "SignUp Unsuccessful, Please Try Again", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(logIn.this, "Inicio invalido, por favor intenta de nuevo", Toast.LENGTH_SHORT).show();
                             }else{
                                 startActivity(new Intent(logIn.this,menuPrincipal.class));
                             }
@@ -71,7 +71,7 @@ public class logIn extends AppCompatActivity {
                     });
                 }
                 else {
-                    Toast.makeText(logIn.this, "Error Occurred!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(logIn.this, "Ha ocurrido un error", Toast.LENGTH_SHORT).show();
                 }
             }
         });
