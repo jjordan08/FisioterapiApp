@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Imagenes">
 
+
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
@@ -18,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
+        app:layout_constraintVertical_bias="0.681" />
 
     <TextView
         android:id="@+id/textoSaludo"
@@ -26,40 +27,42 @@
         android:layout_height="36dp"
         android:layout_marginBottom="8dp"
         android:text="Hola"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/textoRecomendacion"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textoRecomendacion"
-        android:layout_width="309dp"
+        android:layout_width="316dp"
         android:layout_height="62dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="28dp"
         android:text="Recomendaciones"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/textoEjercicio"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imagen"
         android:layout_width="301dp"
         android:layout_height="179dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textoEjercicio"
-        android:layout_width="302dp"
-        android:layout_height="165dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="317dp"
+        android:layout_height="217dp"
         android:text="Instrucciones"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/imagen"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
