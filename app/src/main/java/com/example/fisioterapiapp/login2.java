@@ -2,11 +2,10 @@ package com.example.fisioterapiapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
-//nuevo codigo
+// nuevo
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,26 +21,42 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
-public class logIn extends AppCompatActivity {
+public class login2 extends AppCompatActivity {
 
     EditText email, password;
-    Button btn_signUp;
-    Button signIn;
+    Button btn_signIn;
     FirebaseAuth mFirebaseAuth;
+    private FirebaseAuth.AuthStateListener mAuthStateListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_log_in);
+        setContentView(R.layout.activity_login2);
 
         mFirebaseAuth = FirebaseAuth.getInstance();
         email = findViewById(R.id.editText2);
         password = findViewById(R.id.editText);
-        btn_signUp = findViewById(R.id.button);
-        signIn = findViewById(R.id.InicioSesion);
+        btn_signIn = findViewById(R.id.InicioSesion);
 
-        btn_signUp.setOnClickListener(new View.OnClickListener() {
+        mAuthStateListener = new FirebaseAuth.AuthStateListener() {
+
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
+                if(mFirebaseUser !=null){
+                    Toast.makeText(login2.this, "You are logged in", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(login2.this, menuPrincipal.class);
+                    startActivity(i);
+                }
+                else {
+                    Toast.makeText(login2.this, "Please Login", Toast.LENGTH_SHORT).show();
+                }
+            }
+        };
+
+        btn_signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String emailID = email.getText().toString();
@@ -56,46 +71,43 @@ public class logIn extends AppCompatActivity {
                     password.requestFocus();
                 }
                 else if (emailID.isEmpty() && pwd.isEmpty()){
-                    Toast.makeText(logIn.this, "Fields Are Empty!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(login2.this, "Fields Are Empty!", Toast.LENGTH_SHORT).show();
                 }
                 else if (!(emailID.isEmpty() && pwd.isEmpty())){
-                    mFirebaseAuth.createUserWithEmailAndPassword(emailID,pwd).addOnCompleteListener(logIn.this, new OnCompleteListener<AuthResult>() {
+                    mFirebaseAuth.signInWithEmailAndPassword(emailID,pwd).addOnCompleteListener(login2.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()){
-                                Toast.makeText(logIn.this, "SignUp Unsuccessful, Please Try Again", Toast.LENGTH_SHORT).show();
-                            }else{
-                                startActivity(new Intent(logIn.this,menuPrincipal.class));
+                                Toast.makeText(login2.this, "Login Failed, Please Login Again", Toast.LENGTH_SHORT).show();
+                            }
+                            else {
+                                Intent i = new Intent(login2.this,menuPrincipal.class);
+                                startActivity(i);
                             }
                         }
                     });
                 }
                 else {
-                    Toast.makeText(logIn.this, "Error Occurred!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(login2.this, "Error Occurred!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
-        signIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(logIn.this,login2.class);
-                startActivity(i);
-            }
-        });
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mFirebaseAuth.addAuthStateListener(mAuthStateListener);
     }
 }
-
-/*public class logIn extends AppCompatActivity {
+/*public class login2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_log_in);
+        setContentView(R.layout.activity_login2);
     }
-
-    public void buttonIniciarSesion(View view){
-        Intent intent = new Intent(logIn.this, menuPrincipal.class);
-        startActivity(intent);
-    }
-}*/
+}
+*/

@@ -7,7 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class menuPrincipal extends AppCompatActivity {
+
+    FirebaseAuth Salir;
+    private FirebaseAuth.AuthStateListener listener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +36,7 @@ public class menuPrincipal extends AppCompatActivity {
     }
 
     public void buttonSalir(View view){
+        FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(menuPrincipal.this, logIn.class);
         startActivity(intent);
         Toast.makeText(this, "Ha cerrado sesión", Toast.LENGTH_SHORT).show();
