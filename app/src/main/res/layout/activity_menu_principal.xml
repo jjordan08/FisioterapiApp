@@ -10,13 +10,15 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:text="FisioterapiApp"
+        android:textColor="@color/colorAccent"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.798" />
+        app:layout_constraintVertical_bias="0.469" />
 
     <TextView
         android:id="@+id/textView5"
@@ -34,8 +36,11 @@
         android:layout_width="185dp"
         android:layout_height="52dp"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:backgroundTint="@color/colorAccent"
         android:onClick="buttonEjerciciosAsignados"
         android:text="Ejercicios Asignados"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/VerEjercicios"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -45,8 +50,11 @@
         android:layout_width="185dp"
         android:layout_height="44dp"
         android:layout_marginBottom="20dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:backgroundTint="@color/colorAccent"
         android:onClick="buttonVerEjercicios"
         android:text="Ver Ejercicios"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/Historial"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -56,8 +64,11 @@
         android:layout_width="185dp"
         android:layout_height="44dp"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:backgroundTint="@color/colorAccent"
         android:onClick="buttonHistorial"
         android:text="Historial"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/Salir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -67,8 +78,11 @@
         android:layout_width="185dp"
         android:layout_height="48dp"
         android:layout_marginBottom="104dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:backgroundTint="@color/colorAccent"
         android:onClick="buttonSalir"
         android:text="Salir"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
