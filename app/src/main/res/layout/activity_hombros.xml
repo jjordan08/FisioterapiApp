@@ -11,8 +11,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:backgroundTint="@color/colorAccent"
         android:onClick="buttonccUnoDos"
         android:text="Ejercicio 1.2"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/button17"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -21,21 +24,27 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/roboto"
         android:text="FisioterapiApp"
+        android:textColor="@color/colorAccent"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/textView14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.851" />
+        app:layout_constraintVertical_bias="0.284" />
 
     <Button
         android:id="@+id/button16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:backgroundTint="@color/colorAccent"
         android:onClick="buttonccUnoUno"
         android:text="Ejercicio 1.1"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/button15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -56,8 +65,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="80dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:backgroundTint="@color/colorAccent"
         android:onClick="buttonRegresar"
         android:text="Regresar"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -4,14 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:backgroundTint="@color/colorAccent"
+    android:background="@color/colorAccent"
+    android:foregroundTint="@color/colorAccent"
+    tools:context=".MainStart">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="357dp"
         android:layout_height="515dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="130dp"
         android:scaleType="centerInside"
         android:src="@drawable/logo"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="130dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
+        android:fontFamily="@font/roboto"
         android:text="FisioterapiApp"
+        android:textColor="@color/colorAccent"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,32 +50,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="309dp"
-        android:layout_height="199dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InicioSesion"
-        app:srcCompat="@drawable/fisioterapia" />
-
     <Button
         android:id="@+id/InicioSesion"
         android:layout_width="183dp"
         android:layout_height="48dp"
         android:layout_marginStart="149dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="116dp"
         android:layout_marginEnd="174dp"
-        android:layout_marginBottom="65dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:backgroundTint="@color/colorAccent"
         android:text="Iniciar de Sesion"
-        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintHorizontal_bias="0.368"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 

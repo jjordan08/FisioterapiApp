@@ -7,16 +7,22 @@
     tools:context=".cabezaCuello">
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/roboto"
         android:text="FisioterapiApp"
+        android:textColor="@color/colorAccent"
+        android:textColorHighlight="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimaryDark"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.767" />
+        app:layout_constraintVertical_bias="0.27" />
 
     <TextView
         android:id="@+id/textView11"
@@ -34,8 +40,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:backgroundTint="@color/colorAccent"
+        android:fontFamily="@font/roboto"
         android:onClick="buttonccUnoUno"
         android:text="Ejercicio 1.1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toTopOf="@+id/button11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -45,8 +55,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:backgroundTint="@color/colorAccent"
+        android:fontFamily="@font/roboto"
         android:onClick="buttonccUnoDos"
         android:text="Ejercicio 1.2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toTopOf="@+id/button12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -56,8 +70,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="112dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:backgroundTint="@color/colorAccent"
+        android:fontFamily="@font/roboto"
         android:onClick="buttonccUnoTres"
         android:text="Ejercicio 1.3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toTopOf="@+id/button13"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -67,8 +85,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:backgroundTint="@color/colorAccent"
+        android:fontFamily="@font/roboto"
         android:onClick="buttonRegresar"
         android:text="Regresar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
