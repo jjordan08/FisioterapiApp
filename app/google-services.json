@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "130557873451",
+    "firebase_url": "https://fisioterapiapp-280fc.firebaseio.com",
+    "project_id": "fisioterapiapp-280fc",
+    "storage_bucket": "fisioterapiapp-280fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130557873451:android:dbd8e2f8d014f4a148c96e",
+        "android_client_info": {
+          "package_name": "com.example.fisioterapiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130557873451-3q92r06cfaq68qf0tjv9ml23co3q7e1n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fisioterapiapp",
+            "certificate_hash": "c328036fffde5aaf04aef96dca19580c6bc21556"
+          }
+        },
+        {
+          "client_id": "130557873451-fi61l0napsnk705jf8lhl051bn9veco7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd5SxGgKytklZu-NFWMlTBUBkPhigMK3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130557873451-fi61l0napsnk705jf8lhl051bn9veco7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
