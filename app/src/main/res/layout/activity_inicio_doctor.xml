@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".inicioDoctor">
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FisioterapiApp"
+        android:textColor="@color/colorAccent"
+        android:textSize="36sp"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="44dp" />
+
+    <Button
+        android:id="@+id/verEjercicios"
+        android:layout_width="185dp"
+        android:layout_height="44dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:backgroundTint="@color/colorAccent"
+        android:onClick="buttonVerEjercicios"
+        android:text="Ver Ejercicios"
+        android:textColor="@color/colorPrimary"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="441dp" />
+
+    <Button
+        android:id="@+id/verEjercicios2"
+        android:layout_width="185dp"
+        android:layout_height="44dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:backgroundTint="@color/colorAccent"
+        android:onClick="buttonBuscar"
+        android:text="Buscar"
+        android:textColor="@color/colorPrimary"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="376dp" />
+
+    <Button
+        android:id="@+id/salir"
+        android:layout_width="185dp"
+        android:layout_height="48dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:backgroundTint="@color/colorAccent"
+        android:onClick="buttonSalir"
+        android:text="Salir"
+        android:textColor="@color/colorPrimary"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="613dp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="334dp"
+        android:layout_height="115dp"
+        android:text="Hola Doctor:                                                                                                                  puedes buscar un paciente o ver los ejercicios disponibles.                                                                                                                                                  Selecciona que deseas hacer:"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="175dp" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="cedula Paciente"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="308dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".datosPaciente">
+
+    <Button
+        android:id="@+id/verEjercicios5"
+        android:layout_width="185dp"
+        android:layout_height="44dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:backgroundTint="@color/colorAccent"
+        android:onClick="buttonRegresar"
+        android:text="Regresar"
+        android:textColor="@color/colorPrimary"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="605dp" />
+
+    <Button
+        android:id="@+id/verEjercicios3"
+        android:layout_width="185dp"
+        android:layout_height="44dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:backgroundTint="@color/colorAccent"
+        android:onClick="buttonHistorial"
+        android:text="Historial Ejercicios"
+        android:textColor="@color/colorPrimary"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="449dp" />
+
+    <Button
+        android:id="@+id/verEjercicios4"
+        android:layout_width="185dp"
+        android:layout_height="44dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:backgroundTint="@color/colorAccent"
+        android:onClick="buttonAsignarEjercicios"
+        android:text="Asignar Ejercicios"
+        android:textColor="@color/colorPrimary"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="526dp" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="321dp"
+        android:layout_height="206dp"
+        android:text="Paciente: Camila Castañeda                                                                                         C.C.123456789                                                                             Edad: 27                                                                                                EPS: Sanitas                                                                        Recuperacion de fractura mano izquierda"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="175dp" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FisioterapiApp"
+        android:textColor="@color/colorAccent"
+        android:textSize="36sp"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="44dp" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datos del Paciente:"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="137dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

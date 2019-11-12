@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".login2"></activity>
+        <activity android:name=".asignarEjercicios"></activity>
+        <activity android:name=".datosPaciente" />
+        <activity android:name=".inicioDoctor" />
+        <activity android:name=".login2" />
         <activity android:name=".tobilloPies" />
         <activity android:name=".troncoCadera" />
         <activity android:name=".manoMuneca" />
