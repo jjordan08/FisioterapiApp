@@ -47,6 +47,7 @@ public class logIn extends AppCompatActivity {
                 String emailID = email.getText().toString();
                 String pwd = password.getText().toString();
 
+
                 if (emailID.isEmpty()){
                     email.setError("Ingresa tu dirección de correo");
                     email.requestFocus();

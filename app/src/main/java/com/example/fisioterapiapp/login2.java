@@ -26,6 +26,9 @@ import com.google.firebase.auth.FirebaseUser;
 public class login2 extends AppCompatActivity {
 
     EditText email, password;
+    public String doctor =  "doctor";
+    public String paciente =  "paciente";
+    public String clave =  "admin";
     Button btn_signIn;
     FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
@@ -62,7 +65,15 @@ public class login2 extends AppCompatActivity {
                 String emailID = email.getText().toString();
                 String pwd = password.getText().toString();
 
-                if (emailID.isEmpty()){
+                if ((emailID.equals(doctor)) && (pwd.equals(clave))) {
+                    Intent i = new Intent(login2.this, inicioDoctor.class);
+                    startActivity(i);
+                }
+                else if ((emailID.equals(paciente)) && (pwd.equals(clave))){
+                    Intent i = new Intent(login2.this, menuPrincipal.class);
+                    startActivity(i);
+                }
+                else if (emailID.isEmpty()){
                     email.setError("Ingresa dirreción de correo");
                     email.requestFocus();
                 }

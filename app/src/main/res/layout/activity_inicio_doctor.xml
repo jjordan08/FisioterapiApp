@@ -13,60 +13,72 @@
         android:text="FisioterapiApp"
         android:textColor="@color/colorAccent"
         android:textSize="36sp"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="44dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/verEjercicios"
         android:layout_width="185dp"
         android:layout_height="44dp"
+        android:layout_marginBottom="36dp"
         android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
         android:backgroundTint="@color/colorAccent"
         android:onClick="buttonVerEjercicios"
         android:text="Ver Ejercicios"
         android:textColor="@color/colorPrimary"
-        tools:layout_editor_absoluteX="113dp"
-        tools:layout_editor_absoluteY="441dp" />
+        app:layout_constraintBottom_toTopOf="@+id/salir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/verEjercicios2"
         android:layout_width="185dp"
         android:layout_height="44dp"
+        android:layout_marginBottom="28dp"
         android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
         android:backgroundTint="@color/colorAccent"
         android:onClick="buttonBuscar"
         android:text="Buscar"
         android:textColor="@color/colorPrimary"
-        tools:layout_editor_absoluteX="113dp"
-        tools:layout_editor_absoluteY="376dp" />
+        app:layout_constraintBottom_toTopOf="@+id/verEjercicios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/salir"
         android:layout_width="185dp"
         android:layout_height="48dp"
+        android:layout_marginBottom="64dp"
         android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
         android:backgroundTint="@color/colorAccent"
         android:onClick="buttonSalir"
         android:text="Salir"
         android:textColor="@color/colorPrimary"
-        tools:layout_editor_absoluteX="113dp"
-        tools:layout_editor_absoluteY="613dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView22"
         android:layout_width="334dp"
         android:layout_height="115dp"
+        android:layout_marginBottom="52dp"
         android:text="Hola Doctor:                                                                                                                  puedes buscar un paciente o ver los ejercicios disponibles.                                                                                                                                                  Selecciona que deseas hacer:"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="175dp" />
+        app:layout_constraintBottom_toTopOf="@+id/editText4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
         android:ems="10"
         android:hint="cedula Paciente"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="308dp" />
+        app:layout_constraintBottom_toTopOf="@+id/verEjercicios2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
