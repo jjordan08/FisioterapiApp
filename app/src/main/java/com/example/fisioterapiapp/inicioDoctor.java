@@ -24,6 +24,7 @@ public class inicioDoctor extends AppCompatActivity {
 
     public void buttonVerEjercicios(View view){
         Intent intent = new Intent(inicioDoctor.this,Ejercicios.class);
+        intent.putExtra("dato00", "1");
         startActivity(intent);
     }
 

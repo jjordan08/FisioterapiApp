@@ -8,44 +8,58 @@ import android.view.View;
 
 public class Ejercicios extends AppCompatActivity {
 
+    public int num;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ejercicios);
+        recibirDatos();
     }
 
-    public void buttonCabezaCuello(View view){
-        Intent intent = new Intent(Ejercicios.this,cabezaCuello.class);
+    public void recibirDatos() {
+        Bundle extras = getIntent().getExtras();
+        num = Integer.parseInt(extras.getString("dato00"));
+    }
+
+    public void buttonCabezaCuello(View view) {
+        Intent intent = new Intent(Ejercicios.this, cabezaCuello.class);
         startActivity(intent);
     }
 
-    public void buttonHombros(View view){
-        Intent intent = new Intent(Ejercicios.this,hombros.class);
+    public void buttonHombros(View view) {
+        Intent intent = new Intent(Ejercicios.this, hombros.class);
         startActivity(intent);
     }
 
-    public void buttonCodoAntebrazo(View view){
-        Intent intent = new Intent(Ejercicios.this,codoAntebrazo.class);
+    public void buttonCodoAntebrazo(View view) {
+        Intent intent = new Intent(Ejercicios.this, codoAntebrazo.class);
         startActivity(intent);
     }
 
-    public void buttonManoMuneca(View view){
-        Intent intent = new Intent(Ejercicios.this,manoMuneca.class);
+    public void buttonManoMuneca(View view) {
+        Intent intent = new Intent(Ejercicios.this, manoMuneca.class);
         startActivity(intent);
     }
 
-    public void buttonTroncoCadera(View view){
-        Intent intent = new Intent(Ejercicios.this,troncoCadera.class);
+    public void buttonTroncoCadera(View view) {
+        Intent intent = new Intent(Ejercicios.this, troncoCadera.class);
         startActivity(intent);
     }
 
-    public void buttonTobilloPies(View view){
-        Intent intent = new Intent(Ejercicios.this,tobilloPies.class);
+    public void buttonTobilloPies(View view) {
+        Intent intent = new Intent(Ejercicios.this, tobilloPies.class);
         startActivity(intent);
     }
 
-    public void buttonRegresar(View view){
-        Intent intent = new Intent(Ejercicios.this,menuPrincipal.class);
-        startActivity(intent);
+    public void buttonRegresar(View view) {
+
+        if (num == 1) {
+            Intent intent = new Intent(Ejercicios.this, inicioDoctor.class);
+            startActivity(intent);
+        } else {
+            Intent intent = new Intent(Ejercicios.this, menuPrincipal.class);
+            startActivity(intent);
+        }
     }
 }

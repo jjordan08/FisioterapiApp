@@ -17,6 +17,7 @@ public class datosPaciente extends AppCompatActivity {
 
     public void buttonHistorial(View view){
         Intent intent = new Intent(datosPaciente.this, historial.class);
+        intent.putExtra("dato00", "1");
         startActivity(intent);
     }
 

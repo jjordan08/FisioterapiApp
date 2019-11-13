@@ -8,15 +8,31 @@ import android.view.View;
 
 public class historial extends AppCompatActivity {
 
+
+    public int num;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historial);
-    }
-    public void buttonRegresar(View view){
-        Intent intent = new Intent(historial.this, menuPrincipal.class);
-        startActivity(intent);
+        recibirDatos();
     }
 
+    public void recibirDatos() {
+        Bundle extras = getIntent().getExtras();
+        num = Integer.parseInt(extras.getString("dato00"));
+    }
 
+    public void buttonRegresar(View view) {
+
+        if (num == 1) {
+
+            Intent intent = new Intent(historial.this, datosPaciente.class);
+            startActivity(intent);
+        }else{
+
+            Intent intent = new Intent(historial.this, menuPrincipal.class);
+            startActivity(intent);
+        }
+    }
 }
