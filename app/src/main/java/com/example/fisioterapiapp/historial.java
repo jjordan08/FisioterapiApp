@@ -9,7 +9,7 @@ import android.view.View;
 public class historial extends AppCompatActivity {
 
 
-    public int num;
+    public int num = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class historial extends AppCompatActivity {
 
             Intent intent = new Intent(historial.this, datosPaciente.class);
             startActivity(intent);
-        }else{
+        }else if (num == 0){
 
             Intent intent = new Intent(historial.this, menuPrincipal.class);
             startActivity(intent);

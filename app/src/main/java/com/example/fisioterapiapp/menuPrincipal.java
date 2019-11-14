@@ -27,11 +27,13 @@ public class menuPrincipal extends AppCompatActivity {
 
     public void buttonVerEjercicios(View view){
         Intent intent = new Intent(menuPrincipal.this,Ejercicios.class);
+        intent.putExtra("dato00", "0");
         startActivity(intent);
     }
 
     public void buttonHistorial(View view){
         Intent intent = new Intent(menuPrincipal.this, historial.class);
+        intent.putExtra("dato00", "0");
         startActivity(intent);
     }
 

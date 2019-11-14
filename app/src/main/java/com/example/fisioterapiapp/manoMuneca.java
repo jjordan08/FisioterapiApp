@@ -8,14 +8,24 @@ import android.view.View;
 
 public class manoMuneca extends AppCompatActivity {
 
+    public int num ;
+    public String dato;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mano_muneca);
+        recibirDatos();
+    }
+
+    public void recibirDatos() {
+        Bundle extras = getIntent().getExtras();
+        num = Integer.parseInt(extras.getString("dato00"));
+        dato = String.valueOf(num);
     }
 
     public void buttonRegresar(View view){
         Intent intent = new Intent(manoMuneca.this, Ejercicios.class);
+        intent.putExtra("dato00", dato);
         startActivity(intent);
     }
 
