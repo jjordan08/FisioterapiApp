@@ -3,8 +3,10 @@ package com.example.fisioterapiapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.VideoView;
 
 public class MainStart extends AppCompatActivity {
 
@@ -17,7 +19,7 @@ public class MainStart extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent intent = new Intent(MainStart.this,logIn.class);
+                Intent intent = new Intent(MainStart.this,login2.class);
 
                 startActivity(intent);
 

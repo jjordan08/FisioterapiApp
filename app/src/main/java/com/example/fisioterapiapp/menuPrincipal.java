@@ -39,7 +39,7 @@ public class menuPrincipal extends AppCompatActivity {
 
     public void buttonSalir(View view){
         FirebaseAuth.getInstance().signOut();
-        Intent intent = new Intent(menuPrincipal.this, logIn.class);
+        Intent intent = new Intent(menuPrincipal.this, login2.class);
         startActivity(intent);
         Toast.makeText(this, "Ha cerrado sesión", Toast.LENGTH_SHORT).show();
     }

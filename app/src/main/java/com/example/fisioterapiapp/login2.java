@@ -29,6 +29,7 @@ public class login2 extends AppCompatActivity {
     public String doctor =  "doctor";
     public String paciente =  "paciente";
     public String clave =  "admin";
+    Button sigIn;
     Button btn_signIn;
     FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
@@ -112,6 +113,13 @@ public class login2 extends AppCompatActivity {
         super.onStart();
         mFirebaseAuth.addAuthStateListener(mAuthStateListener);
     }
+
+    public void buttonStartRegistro(View view){
+        Intent intent = new Intent(login2.this, logIn.class);
+        startActivity(intent);
+    }
+
+
 }
 /*public class login2 extends AppCompatActivity {
 

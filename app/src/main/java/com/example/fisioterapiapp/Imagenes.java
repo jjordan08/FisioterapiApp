@@ -3,10 +3,13 @@ package com.example.fisioterapiapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 public class Imagenes extends AppCompatActivity {
 
@@ -24,6 +27,7 @@ public class Imagenes extends AppCompatActivity {
     public String d3;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +36,8 @@ public class Imagenes extends AppCompatActivity {
         recibirDatos();
         cambiarImagen();
         cambiarTextos();
+        video();
+        //cambiarVideo();
     }
 
     public void recibirDatos(){
@@ -45,6 +51,26 @@ public class Imagenes extends AppCompatActivity {
     public void cambiarImagen(){
         ImageView imagen =(ImageView)findViewById(R.id.imagen);
         imagen.setImageResource(imagenes[imagenNum]);
+    }
+
+    public void cambiarVideo(){
+
+        VideoView videoView= (VideoView) findViewById(R.id.video2);
+        Uri uri = Uri.parse("http://techslides.com/demos/sample-videos/small.mp4");
+        videoView.setMediaController(new MediaController(this));
+        videoView.setVideoURI(uri);
+        videoView.requestFocus();
+        videoView.start();
+
+    }
+
+    public void video(){
+        VideoView myvideo = (VideoView) findViewById(R.id.video2);
+        String path = "android.resource://com.example.fisioterapiapp/"+R.raw.video;
+        Uri uri = Uri.parse(path);
+        myvideo.setVideoURI(uri);
+        myvideo.setMediaController(new MediaController(this));
+        myvideo.start();
     }
 
     public void cambiarTextos(){

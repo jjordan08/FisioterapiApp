@@ -22,8 +22,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/colorAccent"
         android:onClick="buttonTresDos"
         android:text="Ejercicio 3.2"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/button29"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -33,20 +35,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="FisioterapiApp"
+        android:textColor="#A4D5CD"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/textView19"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.816" />
+        app:layout_constraintVertical_bias="0.279" />
 
     <Button
         android:id="@+id/button29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/colorAccent"
         android:onClick="buttonRegresar"
         android:text="Regresar"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -56,8 +61,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/colorAccent"
         android:onClick="buttonTresUno"
         android:text="Ejercicio 3.1"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/button27"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
