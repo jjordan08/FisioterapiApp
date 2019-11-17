@@ -2,10 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fisioterapiapp">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -14,10 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".asignarEjercicios"></activity>
+        <activity android:name=".LogIn"></activity>
+        <activity android:name=".asignarEjercicios" />
         <activity android:name=".datosPaciente" />
         <activity android:name=".inicioDoctor" />
-        <activity android:name=".login2" />
         <activity android:name=".tobilloPies" />
         <activity android:name=".troncoCadera" />
         <activity android:name=".manoMuneca" />
@@ -29,7 +29,7 @@
         <activity android:name=".historial" />
         <activity android:name=".Ejercicios" />
         <activity android:name=".menuPrincipal" />
-        <activity android:name=".logIn" />
+        <activity android:name=".registro" />
         <activity android:name=".MainStart">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

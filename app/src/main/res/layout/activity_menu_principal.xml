@@ -13,7 +13,7 @@
         android:layout_marginTop="30dp"
         android:text="FisioterapiApp"
         android:textColor="@color/colorAccent"
-        android:textSize="36sp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,6 +26,7 @@
         android:layout_height="115dp"
         android:layout_marginBottom="28dp"
         android:text="Hola User                                                                                  Selecciona que deseas hacer: "
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/EjerciciosAsignados"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -33,8 +34,8 @@
 
     <Button
         android:id="@+id/EjerciciosAsignados"
-        android:layout_width="185dp"
-        android:layout_height="52dp"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
         android:backgroundTint="@color/colorAccent"
@@ -47,8 +48,8 @@
 
     <Button
         android:id="@+id/VerEjercicios"
-        android:layout_width="185dp"
-        android:layout_height="44dp"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
         android:backgroundTint="@color/colorAccent"
@@ -61,8 +62,8 @@
 
     <Button
         android:id="@+id/Historial"
-        android:layout_width="185dp"
-        android:layout_height="44dp"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
         android:backgroundTint="@color/colorAccent"
@@ -75,8 +76,8 @@
 
     <Button
         android:id="@+id/Salir"
-        android:layout_width="185dp"
-        android:layout_height="48dp"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="104dp"
         android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
         android:backgroundTint="@color/colorAccent"

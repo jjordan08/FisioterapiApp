@@ -66,7 +66,7 @@ public class Imagenes extends AppCompatActivity {
 
     public void video(){
         VideoView myvideo = (VideoView) findViewById(R.id.video2);
-        String path = "android.resource://com.example.fisioterapiapp/"+R.raw.video;
+        String path = "android.resource://com.example.fisioterapiapp/";//+R.raw.video;
         Uri uri = Uri.parse(path);
         myvideo.setVideoURI(uri);
         myvideo.setMediaController(new MediaController(this));

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "130557873451-negc1mdt1gk6rsr95f2srr58fajathth.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fisioterapiapp",
+            "certificate_hash": "93df00f7d9476b9b318d9556a04cb4d6fd541c4e"
+          }
+        },
+        {
           "client_id": "130557873451-3q92r06cfaq68qf0tjv9ml23co3q7e1n.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

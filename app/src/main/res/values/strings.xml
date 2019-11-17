@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FisioterapiApp</string>
+
+    <string-array name="usuarios">
+        <item>Paciente</item>
+        <item>Medico</item>
+    </string-array>
 </resources>

@@ -5,11 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 public class menuPrincipal extends AppCompatActivity {
+
+
+    public static final String user="names";
+    TextView textUser;
 
     FirebaseAuth Salir;
     private FirebaseAuth.AuthStateListener listener;
@@ -18,6 +23,10 @@ public class menuPrincipal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
+
+        textUser = (TextView)findViewById(R.id.textView5);
+        String user = getIntent().getStringExtra("names");
+        textUser.setText("Hola  "+user+"\nSelecciona que deseas hacer:");
     }
 
     public void buttonEjerciciosAsignados(View view){
@@ -39,7 +48,7 @@ public class menuPrincipal extends AppCompatActivity {
 
     public void buttonSalir(View view){
         FirebaseAuth.getInstance().signOut();
-        Intent intent = new Intent(menuPrincipal.this, login2.class);
+        Intent intent = new Intent(menuPrincipal.this, LogIn.class);
         startActivity(intent);
         Toast.makeText(this, "Ha cerrado sesión", Toast.LENGTH_SHORT).show();
     }

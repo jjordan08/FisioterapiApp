@@ -32,7 +32,7 @@ public class inicioDoctor extends AppCompatActivity {
 
     public void buttonSalir(View view){
         FirebaseAuth.getInstance().signOut();
-        Intent intent = new Intent(inicioDoctor.this, logIn.class);
+        Intent intent = new Intent(inicioDoctor.this, LogIn.class);
         startActivity(intent);
         Toast.makeText(this, "Ha cerrado sesión", Toast.LENGTH_SHORT).show();
     }
