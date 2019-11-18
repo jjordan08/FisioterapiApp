@@ -36,8 +36,8 @@ public class registro extends AppCompatActivity implements AdapterView.OnItemSel
     private EditText TextCedula;
     private EditText TextEdad;
     private Spinner TextUsuario;
-     String sexo ;
-    RadioButton sexoF,sexoM;
+    private String sexo;
+    private RadioButton sexoF,sexoM;
     private ProgressDialog progressDialog;
 
     //Declaramos un objeto firebaseAuth

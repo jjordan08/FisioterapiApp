@@ -27,7 +27,7 @@
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="Cedula"
-        android:inputType="textPersonName"
+        android:inputType="numberPassword"
         app:layout_constraintBottom_toTopOf="@+id/editText5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -148,7 +148,7 @@
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="Edad"
-        android:inputType="textPersonName"
+        android:inputType="numberPassword"
         app:layout_constraintBottom_toTopOf="@+id/editText2"
         app:layout_constraintStart_toStartOf="parent" />
 
