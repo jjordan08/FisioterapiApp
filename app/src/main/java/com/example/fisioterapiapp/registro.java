@@ -35,7 +35,9 @@ public class registro extends AppCompatActivity implements AdapterView.OnItemSel
     private EditText TextCedula;
     private EditText TextEdad;
     private Boolean TextUsuario;
+    private Spinner spinUsuarios;
     private ProgressDialog progressDialog;
+
 
     //Declaramos un objeto firebaseAuth
     private FirebaseAuth firebaseAuth;
@@ -65,6 +67,7 @@ public class registro extends AppCompatActivity implements AdapterView.OnItemSel
         TextApellido = (EditText) findViewById(R.id.editText7);
         TextCedula = (EditText) findViewById(R.id.editText8);
         TextEdad = (EditText) findViewById(R.id.editText5);
+        spinUsuarios = (Spinner)findViewById(R.id.spinnerInicio);
         //TextUsuario = (Boolean) findViewById(R.id.spinnerInicio);
         progressDialog = new ProgressDialog(this);
 
