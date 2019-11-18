@@ -9,13 +9,15 @@
     <TextView
         android:id="@+id/textView19"
         android:layout_width="305dp"
-        android:layout_height="54dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="80dp"
         android:text="Hola User                                                                        3. Codo y Antebrazo"
-        android:textSize="18sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/button30"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
     <Button
         android:id="@+id/button27"
@@ -34,14 +36,13 @@
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
         android:text="FisioterapiApp"
         android:textColor="#A4D5CD"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView19"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.279" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button29"

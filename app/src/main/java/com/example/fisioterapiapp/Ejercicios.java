@@ -5,8 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class Ejercicios extends AppCompatActivity {
+
+    public static final String user="names";
+    TextView textUser;
 
     public int num = 0;
     public String dato;
@@ -16,6 +20,10 @@ public class Ejercicios extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ejercicios);
         recibirDatos();
+
+        textUser = (TextView)findViewById(R.id.textView4);
+        String user = getIntent().getStringExtra("names");
+        textUser.setText(""+user+"\nSelecciona la categoría de ejercicios que desea realizar");
     }
 
     public void recibirDatos() {

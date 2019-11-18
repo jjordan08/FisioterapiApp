@@ -1,33 +1,45 @@
 package com.example.fisioterapiapp;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import androidx.annotation.NonNull;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class registro extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     //defining view objects
     private EditText TextEmail;
     private EditText TextPassword;
+    private EditText TextName;
+    private EditText TextApellido;
+    private EditText TextCedula;
+    private EditText TextEdad;
+    private Boolean TextUsuario;
     private ProgressDialog progressDialog;
 
     //Declaramos un objeto firebaseAuth
     private FirebaseAuth firebaseAuth;
+    private DatabaseReference data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +56,16 @@ public class registro extends AppCompatActivity implements AdapterView.OnItemSel
 
         //inicializamos el objeto firebaseAuth
         firebaseAuth = FirebaseAuth.getInstance();
+        data = FirebaseDatabase.getInstance().getReference();
 
         //Referenciamos los views
         TextEmail = (EditText) findViewById(R.id.editText2);
         TextPassword = (EditText) findViewById(R.id.editText);
+        TextName = (EditText) findViewById(R.id.editText6);
+        TextApellido = (EditText) findViewById(R.id.editText7);
+        TextCedula = (EditText) findViewById(R.id.editText8);
+        TextEdad = (EditText) findViewById(R.id.editText5);
+        //TextUsuario = (Boolean) findViewById(R.id.spinnerInicio);
         progressDialog = new ProgressDialog(this);
 
     }
@@ -56,8 +74,9 @@ public class registro extends AppCompatActivity implements AdapterView.OnItemSel
     private void registrarUsuario(){
 
         //Obtenemos el email y la contraseña desde las cajas de texto
-        String email = TextEmail.getText().toString().trim();
-        String password  = TextPassword.getText().toString().trim();
+        final String email = TextEmail.getText().toString().trim();
+        final String password  = TextPassword.getText().toString().trim();
+        final String name = TextName.getText().toString().trim();
 
         //Verificamos que las cajas de texto no esten vacías
         if(TextUtils.isEmpty(email)){
@@ -84,6 +103,15 @@ public class registro extends AppCompatActivity implements AdapterView.OnItemSel
                             Intent intent = new Intent(registro.this, LogIn.class);
                             Toast.makeText(registro.this,"Se ha registrado el usuario con el email: "+ TextEmail.getText(),Toast.LENGTH_LONG).show();
                             startActivity(intent);
+
+                            Map<String, Object> map = new HashMap<>();
+                            map.put("name",name);
+                            map.put("email",email);
+                            map.put("contrasena",password);
+
+
+                            String id = firebaseAuth.getCurrentUser().getUid();
+                            data.child("Usuarios").child(id).setValue(map);
                         }else {
                             if (task.getException() instanceof FirebaseAuthUserCollisionException) {//si se presenta colicion o esta registrado
                                 Toast.makeText(registro.this, "Ya existe el usuario ", Toast.LENGTH_SHORT).show();

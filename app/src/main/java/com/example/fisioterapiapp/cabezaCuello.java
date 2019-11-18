@@ -5,8 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class cabezaCuello extends AppCompatActivity {
+
+    public static final String user="names";
+    TextView textUser;
 
     public int num ;
     public String dato;
@@ -15,6 +19,10 @@ public class cabezaCuello extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cabeza_cuello);
+
+        textUser = (TextView)findViewById(R.id.textView11);
+        String user = getIntent().getStringExtra("names");
+        textUser.setText(""+user+"\n1. Cabeza y Cuello");
 
         recibirDatos();
     }

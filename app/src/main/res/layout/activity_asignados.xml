@@ -45,9 +45,11 @@
     <TextView
         android:id="@+id/textView9"
         android:layout_width="303dp"
-        android:layout_height="84dp"
+        android:layout_height="150dp"
         android:layout_marginBottom="392dp"
         android:text="Hola user                                                                                Tu medico asigno los siguientes ejercicios 2 veces por dia:"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/button9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

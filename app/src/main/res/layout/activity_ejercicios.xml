@@ -9,10 +9,11 @@
     <TextView
         android:id="@+id/textView4"
         android:layout_width="329dp"
-        android:layout_height="79dp"
+        android:layout_height="140dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="20dp"
-        android:text="Hola User                                                                                  Selecciona la categoria de ejercicios que deseas  deseas hacer: "
+        android:text="Hola User                                                                                  Selecciona la categoria de ejercicios que deseas hacer: "
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

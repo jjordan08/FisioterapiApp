@@ -5,17 +5,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class tobilloPies extends AppCompatActivity {
 
     public int num ;
     public String dato;
 
+    public static final String user="names";
+    TextView textUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tobillo_pies);
         recibirDatos();
+
+        textUser = (TextView)findViewById(R.id.textView15);
+        String user = getIntent().getStringExtra("names");
+        textUser.setText(""+user+"\n5. Tobillo y Pies");
     }
 
     public void recibirDatos() {

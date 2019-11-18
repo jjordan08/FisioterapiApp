@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class codoAntebrazo extends AppCompatActivity {
 
+    public static final String user="names";
+    TextView textUser;
 
     public int num ;
     public String dato;
@@ -16,6 +19,10 @@ public class codoAntebrazo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_codo_antebrazo);
         recibirDatos();
+
+        textUser = (TextView)findViewById(R.id.textView19);
+        String user = getIntent().getStringExtra("names");
+        textUser.setText(""+user+"\n3. Codo y Antebrazo");
     }
 
     public void recibirDatos() {
