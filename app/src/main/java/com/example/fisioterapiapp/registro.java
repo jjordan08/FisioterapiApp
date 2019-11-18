@@ -86,6 +86,7 @@ public class registro extends AppCompatActivity implements AdapterView.OnItemSel
         final String apellido = TextApellido.getText().toString().trim();
         final String cedula = TextCedula.getText().toString().trim();
         final String edad = TextEdad.getText().toString().trim();
+
         if (sexoM.isChecked()) {
             sexo = sexoM.getText().toString();
         } else if (sexoF.isChecked()) {
