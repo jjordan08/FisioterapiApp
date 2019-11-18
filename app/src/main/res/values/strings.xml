@@ -2,6 +2,7 @@
     <string name="app_name">FisioterapiApp</string>
 
     <string-array name="usuarios">
+        <item>Seleccione Opcion</item>
         <item>Paciente</item>
         <item>Medico</item>
     </string-array>
