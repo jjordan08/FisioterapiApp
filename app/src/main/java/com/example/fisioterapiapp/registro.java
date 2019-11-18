@@ -34,10 +34,8 @@ public class registro extends AppCompatActivity implements AdapterView.OnItemSel
     private EditText TextApellido;
     private EditText TextCedula;
     private EditText TextEdad;
-    private Boolean TextUsuario;
-    private Spinner spinUsuarios;
+    private Spinner TextUsuario;
     private ProgressDialog progressDialog;
-
 
     //Declaramos un objeto firebaseAuth
     private FirebaseAuth firebaseAuth;
@@ -67,8 +65,7 @@ public class registro extends AppCompatActivity implements AdapterView.OnItemSel
         TextApellido = (EditText) findViewById(R.id.editText7);
         TextCedula = (EditText) findViewById(R.id.editText8);
         TextEdad = (EditText) findViewById(R.id.editText5);
-        spinUsuarios = (Spinner)findViewById(R.id.spinnerInicio);
-        //TextUsuario = (Boolean) findViewById(R.id.spinnerInicio);
+        TextUsuario = (Spinner) findViewById(R.id.spinnerInicio);
         progressDialog = new ProgressDialog(this);
 
     }
@@ -80,6 +77,13 @@ public class registro extends AppCompatActivity implements AdapterView.OnItemSel
         final String email = TextEmail.getText().toString().trim();
         final String password  = TextPassword.getText().toString().trim();
         final String name = TextName.getText().toString().trim();
+        final String apellido = TextApellido.getText().toString().trim();
+        final String cedula = TextCedula.getText().toString().trim();
+        final String edad = TextEdad.getText().toString().trim();
+        final String usuario = TextUsuario.getSelectedItem().toString();
+
+
+
 
         //Verificamos que las cajas de texto no esten vacías
         if(TextUtils.isEmpty(email)){
@@ -107,10 +111,17 @@ public class registro extends AppCompatActivity implements AdapterView.OnItemSel
                             Toast.makeText(registro.this,"Se ha registrado el usuario con el email: "+ TextEmail.getText(),Toast.LENGTH_LONG).show();
                             startActivity(intent);
 
+
+
                             Map<String, Object> map = new HashMap<>();
-                            map.put("name",name);
-                            map.put("email",email);
-                            map.put("contrasena",password);
+                            map.put("nombre",name);
+                            map.put("apellido",apellido);
+                            map.put("cedula",cedula);
+                            map.put("edad",edad);
+                            map.put("usuario", usuario);
+                            map.put("correo",email);
+                            map.put("contraseña",password);
+
 
 
                             String id = firebaseAuth.getCurrentUser().getUid();
