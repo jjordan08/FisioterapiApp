@@ -131,14 +131,15 @@ public class registro extends AppCompatActivity implements AdapterView.OnItemSel
                             map.put("cedula",cedula);
                             map.put("edad",edad);
                             map.put("sexo",sexo);
-                            map.put("usuario", usuario);
                             map.put("correo",email);
                             map.put("contraseña",password);
 
-
                             String id = firebaseAuth.getCurrentUser().getUid();
-                            data.child("Usuarios").child(id).setValue(map);
-
+                            if(usuario.equals("Paciente")) {
+                                data.child("Paciente").child(id).setValue(map);
+                            }else if(usuario.equals("Medico")){
+                                data.child("Medico").child(id).setValue(map);
+                            }
 
                         }else {
                             if (task.getException() instanceof FirebaseAuthUserCollisionException) {//si se presenta colicion o esta registrado
