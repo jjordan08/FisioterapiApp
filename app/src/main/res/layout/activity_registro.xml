@@ -173,13 +173,13 @@
         app:layout_constraintStart_toEndOf="@+id/textView28">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/radioButtonM"
             android:layout_width="110dp"
             android:layout_height="22dp"
             android:text="Masculino" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/radioButtonF"
             android:layout_width="110dp"
             android:layout_height="22dp"
             android:text="Femenino" />

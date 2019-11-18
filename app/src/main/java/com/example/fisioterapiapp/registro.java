@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -35,6 +36,8 @@ public class registro extends AppCompatActivity implements AdapterView.OnItemSel
     private EditText TextCedula;
     private EditText TextEdad;
     private Spinner TextUsuario;
+     String sexo ;
+    RadioButton sexoF,sexoM;
     private ProgressDialog progressDialog;
 
     //Declaramos un objeto firebaseAuth
@@ -48,6 +51,7 @@ public class registro extends AppCompatActivity implements AdapterView.OnItemSel
 
         //creacion spineer para el registro de tipo de usuario
         Spinner spinner = findViewById(R.id.spinnerInicio);
+
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.usuarios, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -65,6 +69,8 @@ public class registro extends AppCompatActivity implements AdapterView.OnItemSel
         TextApellido = (EditText) findViewById(R.id.editText7);
         TextCedula = (EditText) findViewById(R.id.editText8);
         TextEdad = (EditText) findViewById(R.id.editText5);
+        sexoM = (RadioButton)findViewById(R.id.radioButtonM);
+        sexoF = (RadioButton)findViewById(R.id.radioButtonF);
         TextUsuario = (Spinner) findViewById(R.id.spinnerInicio);
         progressDialog = new ProgressDialog(this);
 
@@ -80,6 +86,11 @@ public class registro extends AppCompatActivity implements AdapterView.OnItemSel
         final String apellido = TextApellido.getText().toString().trim();
         final String cedula = TextCedula.getText().toString().trim();
         final String edad = TextEdad.getText().toString().trim();
+        if (sexoM.isChecked()) {
+            sexo = sexoM.getText().toString();
+        } else if (sexoF.isChecked()) {
+            sexo = sexoF.getText().toString();
+        }
         final String usuario = TextUsuario.getSelectedItem().toString();
 
 
@@ -118,14 +129,16 @@ public class registro extends AppCompatActivity implements AdapterView.OnItemSel
                             map.put("apellido",apellido);
                             map.put("cedula",cedula);
                             map.put("edad",edad);
+                            map.put("sexo",sexo);
                             map.put("usuario", usuario);
                             map.put("correo",email);
                             map.put("contraseña",password);
 
 
-
                             String id = firebaseAuth.getCurrentUser().getUid();
                             data.child("Usuarios").child(id).setValue(map);
+
+
                         }else {
                             if (task.getException() instanceof FirebaseAuthUserCollisionException) {//si se presenta colicion o esta registrado
                                 Toast.makeText(registro.this, "Ya existe el usuario ", Toast.LENGTH_SHORT).show();
