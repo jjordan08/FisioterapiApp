@@ -1,16 +1,26 @@
 package com.example.fisioterapiapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 public class Ejercicios extends AppCompatActivity {
 
     public static final String user="names";
-    TextView textUser;
+    TextView textUser2;
+    DatabaseReference referencia;
+    FirebaseAuth firebaseAuth;
 
     public int num = 0;
     public String dato;
@@ -21,9 +31,26 @@ public class Ejercicios extends AppCompatActivity {
         setContentView(R.layout.activity_ejercicios);
         recibirDatos();
 
-        textUser = (TextView)findViewById(R.id.textView4);
-        String user = getIntent().getStringExtra("names");
-        textUser.setText(""+user+"\nSelecciona la categoría de ejercicios que desea realizar");
+        textUser2 = (TextView)findViewById(R.id.textView4);
+        referencia = FirebaseDatabase.getInstance().getReference();
+        firebaseAuth = FirebaseAuth.getInstance();
+        String id = firebaseAuth.getCurrentUser().getUid();
+
+        referencia.child("Paciente").child(id).child("nombre").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                if (dataSnapshot.exists()){
+                    String nombre = dataSnapshot.getValue().toString();
+                    textUser2.setText("Hola "+nombre+"\nSelecciona que ejercicios deseas realizar:");
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
     public void recibirDatos() {

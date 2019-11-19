@@ -1,27 +1,34 @@
 package com.example.fisioterapiapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
-import android.os.Bundle;
-import androidx.annotation.NonNull;
 import android.content.Intent;
+import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 
 public class LogIn extends AppCompatActivity implements View.OnClickListener {
     //defining view objects
     private EditText TextEmail;
     private EditText TextPassword;
+    private TextView TipoUsuario;
     private Button btnRegistrar;
     private ProgressDialog progressDialog;
     public String paciente  =  "paciente";
@@ -31,6 +38,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
 
     //Declaramos un objeto firebaseAuth
     private FirebaseAuth firebaseAuth;
+    private DatabaseReference data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +46,15 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_log_in);
 
         //inicializamos el objeto firebaseAuth
+
         firebaseAuth = FirebaseAuth.getInstance();
 
+        data = FirebaseDatabase.getInstance().getReference();
+
+
+
         //Referenciamos los views
+        TipoUsuario = (TextView) findViewById(R.id.textView22);
         TextEmail = (EditText) findViewById(R.id.editText2);
         TextPassword = (EditText) findViewById(R.id.editText);
         btnRegistrar = (Button) findViewById(R.id.InicioSesion);
@@ -48,6 +62,25 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
 
         //attaching listener to button
         btnRegistrar.setOnClickListener(this);
+
+        data.child("Persona").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                if(dataSnapshot.exists()){
+
+                    String usuario = dataSnapshot.child("usuario").getValue().toString();
+                    TipoUsuario.setText(usuario);
+
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
 

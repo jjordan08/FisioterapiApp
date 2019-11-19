@@ -63,9 +63,10 @@
     <TextView
         android:id="@+id/textView22"
         android:layout_width="334dp"
-        android:layout_height="115dp"
+        android:layout_height="130dp"
         android:layout_marginBottom="52dp"
-        android:text="Hola Doctor:                                                                                                                  puedes buscar un paciente o ver los ejercicios disponibles.                                                                                                                                                  Selecciona que deseas hacer:"
+        android:text="                                                                                                                                                                                                                                               Selecciona que deseas hacer:"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/editText4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
