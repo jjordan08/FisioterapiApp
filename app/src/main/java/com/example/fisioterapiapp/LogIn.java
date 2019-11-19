@@ -39,6 +39,8 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
     //Declaramos un objeto firebaseAuth
     private FirebaseAuth firebaseAuth;
     private DatabaseReference data;
+    private DatabaseReference referencia;
+    private DatabaseReference referencia2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,12 +125,53 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                         //checking if success
 
                         if(task.isSuccessful()){
-                            int pos = email.indexOf("@");//verifica el caracter donde se encuentra en el email
-                            String user = email.substring(0,pos);// envia el email hasta donde se encuentra la posicion de la @
-                            Toast.makeText(LogIn.this,"Hola: "+ TextEmail.getText(),Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(LogIn.this,menuPrincipal.class);
-                            intent.putExtra(menuPrincipal.user, user);
-                            startActivity(intent);
+
+                            referencia = FirebaseDatabase.getInstance().getReference();
+                            referencia2 = FirebaseDatabase.getInstance().getReference();
+                            firebaseAuth = FirebaseAuth.getInstance();
+                            String id = firebaseAuth.getCurrentUser().getUid();
+
+
+                                    referencia.child("Paciente").child(id).child("usuario").addValueEventListener(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                                            if (dataSnapshot.exists()){
+                                                int pos = email.indexOf("@");//verifica el caracter donde se encuentra en el email
+                                                String user = email.substring(0,pos);// envia el email hasta donde se encuentra la posicion de la @
+                                                Toast.makeText(LogIn.this,"Hola: "+ TextEmail.getText(),Toast.LENGTH_LONG).show();
+                                                Intent intent = new Intent(LogIn.this,menuPrincipal.class);
+                                                intent.putExtra(menuPrincipal.user, user);
+                                                startActivity(intent);
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                        }
+                                    });
+
+                                    referencia2.child("Medico").child(id).child("usuario").addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                                            if (dataSnapshot.exists()){
+                                                int pos = email.indexOf("@");//verifica el caracter donde se encuentra en el email
+                                                String user = email.substring(0,pos);// envia el email hasta donde se encuentra la posicion de la @
+                                                Toast.makeText(LogIn.this,"Hola: "+ TextEmail.getText(),Toast.LENGTH_LONG).show();
+                                                Intent intent = new Intent(LogIn.this,inicioDoctor.class);
+                                                intent.putExtra(menuPrincipal.user, user);
+                                                startActivity(intent);
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                        }
+                                    });
+
 
                         } else {
                             Toast.makeText(LogIn.this, "Datos Erroneos ", Toast.LENGTH_LONG).show();
