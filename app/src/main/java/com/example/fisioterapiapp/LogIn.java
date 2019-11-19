@@ -17,6 +17,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class LogIn extends AppCompatActivity implements View.OnClickListener {
     //defining view objects
@@ -27,10 +32,12 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
     public String paciente  =  "paciente";
     public String doctor =  "doctor";
     public String clave =  "admin";
+    public String Usuario;
 
 
     //Declaramos un objeto firebaseAuth
     private FirebaseAuth firebaseAuth;
+    private DatabaseReference data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +46,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
 
         //inicializamos el objeto firebaseAuth
         firebaseAuth = FirebaseAuth.getInstance();
+        data = FirebaseDatabase.getInstance().getReference();
 
         //Referenciamos los views
         TextEmail = (EditText) findViewById(R.id.editText2);
@@ -48,6 +56,8 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
 
         //attaching listener to button
         btnRegistrar.setOnClickListener(this);
+
+
     }
 
 
@@ -56,7 +66,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
 
         //Obtenemos el email y la contraseña desde las cajas de texto
         final String email = TextEmail.getText().toString().trim();
-        String password  = TextPassword.getText().toString().trim();
+        final String password  = TextPassword.getText().toString().trim();
 
         if ((email.equals(paciente)) && (password.equals(clave))) {
             Intent i = new Intent(LogIn.this, menuPrincipal.class);
