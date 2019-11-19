@@ -23,7 +23,6 @@
         android:layout_width="334dp"
         android:layout_height="115dp"
         android:layout_marginBottom="28dp"
-        android:text="Hola User                                                                                  Selecciona que deseas hacer: "
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/EjerciciosAsignados"
         app:layout_constraintEnd_toEndOf="parent"

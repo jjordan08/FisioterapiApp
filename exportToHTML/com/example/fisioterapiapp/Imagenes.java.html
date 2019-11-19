@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>Imagenes.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000080; font-weight: bold;}
+.s1 { color: #000000;}
+.s2 { color: #808080; font-style: italic;}
+.s3 { color: #008000; font-weight: bold;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Imagenes.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span>com.example.fisioterapiapp;
+
+<span class="s0">import </span>androidx.appcompat.app.AppCompatActivity;
+
+<span class="s0">import </span>android.content.Intent;
+<span class="s0">import </span>android.net.Uri;
+<span class="s0">import </span>android.os.Bundle;
+<span class="s0">import </span>android.view.View;
+<span class="s0">import </span>android.widget.ImageView;
+<span class="s0">import </span>android.widget.MediaController;
+<span class="s0">import </span>android.widget.TextView;
+<span class="s0">import </span>android.widget.VideoView;
+
+<span class="s0">public class </span>Imagenes <span class="s0">extends </span>AppCompatActivity {
+
+    <span class="s0">public int</span>[] imagenes = {R.drawable.unouno <span class="s2">/*[pos0 = 1.1]*/</span>, R.drawable.unodos<span class="s2">/*[pos1 = 1.2]*/</span>,R.drawable.unotres<span class="s2">/*[pos2 = 1.3]*/</span>,
+    R.drawable.dosuno<span class="s2">/*[pos3 = 2.1]*/</span>, R.drawable.dosdos<span class="s2">/*[pos4 = 2.2]*/</span>,R.drawable.tresuno<span class="s2">/*[pos5 = 3.1]*/</span>, R.drawable.tresdos<span class="s2">/*[pos6 = 3.2]*/</span>,
+    R.drawable.cuatrouno<span class="s2">/*[pos7 = 4.1]*/</span>, R.drawable.cuatrodos<span class="s2">/*[pos8 = 4.2]*/</span>, R.drawable.cuatrotres<span class="s2">/*[pos9 = 4.3]*/</span>, R.drawable.cuatrocuatro<span class="s2">/*[pos10 = 4.4]*/</span>,
+    R.drawable.cuatrocinco<span class="s2">/*[pos11 = 4.5]*/</span>, R.drawable.cincouno<span class="s2">/*[pos12 = 5.1]*/</span>, R.drawable.cincodos<span class="s2">/*[pos13 = 5.2]*/</span>, R.drawable.cincotres<span class="s2">/*[pos14 = 5.3]*/</span>,
+    R.drawable.cincocuatro<span class="s2">/*[pos15 = 5.4]*/</span>,R.drawable.cincocinco<span class="s2">/*[pos16 = 5.5]*/</span>, R.drawable.cincoseis<span class="s2">/*[pos17 = 5.6]*/</span>, R.drawable.cincosiete<span class="s2">/*[pos18 = 5.7]*/</span>,
+    R.drawable.seisuno<span class="s2">/*[pos19 = 6.1]*/</span>,R.drawable.seisdos<span class="s2">/*[pos20 = 6.2]*/</span>, R.drawable.seistres<span class="s2">/*[pos21 = 6.3]*/</span>};
+
+
+    <span class="s0">public int </span>imagenNum;
+    <span class="s0">public </span>String d1;
+    <span class="s0">public </span>String d2;
+    <span class="s0">public </span>String d3;
+
+
+
+    @Override
+    <span class="s0">protected void </span>onCreate(Bundle savedInstanceState) {
+        <span class="s0">super</span>.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_imagenes);
+
+        recibirDatos();
+        cambiarImagen();
+        cambiarTextos();
+        video();
+        <span class="s2">//cambiarVideo();</span>
+    }
+
+    <span class="s0">public void </span>recibirDatos(){
+        Bundle extras = getIntent().getExtras();
+        imagenNum = Integer.parseInt(extras.getString(<span class="s3">&quot;dato00&quot;</span>));
+        d1 = extras.getString(<span class="s3">&quot;dato01&quot;</span>);
+        d2 = extras.getString(<span class="s3">&quot;dato02&quot;</span>);
+        d3 = extras.getString(<span class="s3">&quot;dato03&quot;</span>);
+    }
+
+    <span class="s0">public void </span>cambiarImagen(){
+        ImageView imagen =(ImageView)findViewById(R.id.imagen);
+        imagen.setImageResource(imagenes[imagenNum]);
+    }
+
+    <span class="s0">public void </span>cambiarVideo(){
+
+        VideoView videoView= (VideoView) findViewById(R.id.video2);
+        Uri uri = Uri.parse(<span class="s3">&quot;http://techslides.com/demos/sample-videos/small.mp4&quot;</span>);
+        videoView.setMediaController(<span class="s0">new </span>MediaController(<span class="s0">this</span>));
+        videoView.setVideoURI(uri);
+        videoView.requestFocus();
+        videoView.start();
+
+    }
+
+    <span class="s0">public void </span>video(){
+        VideoView myvideo = (VideoView) findViewById(R.id.video2);
+        String path = <span class="s3">&quot;android.resource://com.example.fisioterapiapp/&quot;</span>+R.raw.video;
+        Uri uri = Uri.parse(path);
+        myvideo.setVideoURI(uri);
+        myvideo.setMediaController(<span class="s0">new </span>MediaController(<span class="s0">this</span>));
+        myvideo.start();
+    }
+
+    <span class="s0">public void </span>cambiarTextos(){
+
+        TextView txtSaludo = (TextView)findViewById(R.id.textoSaludo);
+        txtSaludo.setText(<span class="s3">&quot;Hola&quot; </span>);
+
+        TextView txtRecomendacion = (TextView)findViewById(R.id.textoRecomendacion);
+        txtRecomendacion.setText(<span class="s3">&quot;&quot;</span>+d2);
+
+        TextView txtEjercicio = (TextView)findViewById(R.id.textoEjercicio);
+        txtEjercicio.setText(<span class="s3">&quot;&quot;</span>+d3);
+    }
+
+
+
+
+}
+</pre>
+</body>
+</html>
