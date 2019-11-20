@@ -126,13 +126,15 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
 
                         if(task.isSuccessful()){
 
+
                             referencia = FirebaseDatabase.getInstance().getReference();
-                            referencia2 = FirebaseDatabase.getInstance().getReference();
                             firebaseAuth = FirebaseAuth.getInstance();
                             String id = firebaseAuth.getCurrentUser().getUid();
+                            DatabaseReference paciente = referencia.child("Paciente").child(id).child("usuario");
+                            DatabaseReference medico = referencia.child("Medico").child(id).child("usuario");
 
 
-                                    referencia.child("Paciente").child(id).child("usuario").addValueEventListener(new ValueEventListener() {
+                                    paciente.addValueEventListener(new ValueEventListener() {
                                         @Override
                                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
@@ -149,10 +151,10 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                                         @Override
                                         public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                                        }
+                                        }   
                                     });
 
-                                    referencia2.child("Medico").child(id).child("usuario").addValueEventListener(new ValueEventListener() {
+                                    medico.addValueEventListener(new ValueEventListener() {
                                     @Override
                                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 

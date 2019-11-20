@@ -133,6 +133,7 @@ public class registro extends AppCompatActivity implements AdapterView.OnItemSel
                             map.put("sexo",sexo);
                             map.put("correo",email);
                             map.put("contraseña",password);
+                            map.put("usuario",usuario);
 
                             String id = firebaseAuth.getCurrentUser().getUid();
                             if(usuario.equals("Paciente")) {
