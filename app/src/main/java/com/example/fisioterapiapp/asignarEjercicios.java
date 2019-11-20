@@ -39,6 +39,7 @@ public class asignarEjercicios extends AppCompatActivity {
 
         frecuencia1_1 = (Spinner)findViewById(R.id.spinnerEje1_1);
         frecuencia1_2 = (Spinner)findViewById(R.id.spinnerEje1_2);
+        frecuencia1_3 = (Spinner)findViewById(R.id.spinnerEje1_3);
         frecuencia2_1 = (Spinner)findViewById(R.id.spinnerEje2_1);
         frecuencia2_2 = (Spinner)findViewById(R.id.spinnerEje2_2);
         frecuencia3_1 = (Spinner)findViewById(R.id.spinnerEje3_1);
@@ -57,12 +58,12 @@ public class asignarEjercicios extends AppCompatActivity {
         frecuencia6_2 = (Spinner)findViewById(R.id.spinnerEje6_2);
         frecuencia6_3 = (Spinner)findViewById(R.id.spinnerEje6_3);
 
-
-
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.Frecuencia, android.R.layout.simple_spinner_item);
+
         frecuencia1_1.setAdapter(adapter);
         frecuencia1_2.setAdapter(adapter);
         frecuencia1_3.setAdapter(adapter);
+        frecuencia2_1.setAdapter(adapter);
         frecuencia2_2.setAdapter(adapter);
         frecuencia3_1.setAdapter(adapter);
         frecuencia3_2.setAdapter(adapter);
@@ -79,8 +80,6 @@ public class asignarEjercicios extends AppCompatActivity {
         frecuencia6_1.setAdapter(adapter);
         frecuencia6_2.setAdapter(adapter);
         frecuencia6_3.setAdapter(adapter);
-
-
 
 
 
