@@ -9,9 +9,18 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
-public class Imagenes extends AppCompatActivity {
+import com.google.android.youtube.player.YouTubeBaseActivity;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerView;
+
+public class Imagenes  extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener,YouTubePlayer.PlaybackEventListener {
+
+    String claveYoutube = "AIzaSyA_Imq3R746AZ9UVts423LqnSB2l9ciVl8";
+    YouTubePlayerView youTubePlayerView;
 
     public int[] imagenes = {R.drawable.unouno /*[pos0 = 1.1]*/, R.drawable.unodos/*[pos1 = 1.2]*/,R.drawable.unotres/*[pos2 = 1.3]*/,
     R.drawable.dosuno/*[pos3 = 2.1]*/, R.drawable.dosdos/*[pos4 = 2.2]*/,R.drawable.tresuno/*[pos5 = 3.1]*/, R.drawable.tresdos/*[pos6 = 3.2]*/,
@@ -33,11 +42,74 @@ public class Imagenes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_imagenes);
 
+        youTubePlayerView=(YouTubePlayerView)findViewById(R.id.youtube_view1);
+        youTubePlayerView.initialize(claveYoutube,this);
+
         recibirDatos();
         cambiarImagen();
         cambiarTextos();
-        video();
         //cambiarVideo();
+    }
+
+    @Override
+    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
+
+        if(!b){
+            youTubePlayer.cueVideo("hJLtXVO9k24");
+            //youTubePlayer2.cueVideo("lWIQ7QCxp8Q");
+            //youTubePlayer3.cueVideo("DAmyax6EZD8");
+            //youTubePlayer4.cueVideo("qDXp-oMwkug");
+            //youTubePlayer5.cueVideo("5-mq5C4Vx4o");
+        }
+    }
+
+    @Override
+    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
+
+        if(youTubeInitializationResult.isUserRecoverableError()){
+            youTubeInitializationResult.getErrorDialog(this,1).show();
+
+        }else {
+            String error = "error al iniciar youtube" + youTubeInitializationResult.toString();
+            Toast.makeText(getApplication(),error,Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    protected void onActivityResult (int requestCode, int resultCode, Intent data){
+        if(requestCode == 1){
+
+            getYoutubePlayerProvider().initialize(claveYoutube,this);
+        }
+    }
+
+    protected YouTubePlayer.Provider getYoutubePlayerProvider(){
+        return youTubePlayerView;
+
+    }
+
+    @Override
+    public void onPlaying() {
+
+    }
+
+    @Override
+    public void onPaused() {
+
+    }
+
+    @Override
+    public void onStopped() {
+
+    }
+
+    @Override
+    public void onBuffering(boolean b) {
+
+    }
+
+    @Override
+    public void onSeekTo(int i) {
+
     }
 
     public void recibirDatos(){
@@ -53,25 +125,7 @@ public class Imagenes extends AppCompatActivity {
         imagen.setImageResource(imagenes[imagenNum]);
     }
 
-    public void cambiarVideo(){
 
-        VideoView videoView= (VideoView) findViewById(R.id.video2);
-        Uri uri = Uri.parse("http://techslides.com/demos/sample-videos/small.mp4");
-        videoView.setMediaController(new MediaController(this));
-        videoView.setVideoURI(uri);
-        videoView.requestFocus();
-        videoView.start();
-
-    }
-
-    public void video(){
-        VideoView myvideo = (VideoView) findViewById(R.id.video2);
-        String path = "android.resource://com.example.fisioterapiapp/";//+R.raw.video;
-        Uri uri = Uri.parse(path);
-        myvideo.setVideoURI(uri);
-        myvideo.setMediaController(new MediaController(this));
-        myvideo.start();
-    }
 
     public void cambiarTextos(){
 
