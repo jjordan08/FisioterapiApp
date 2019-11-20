@@ -3,6 +3,7 @@ package com.example.fisioterapiapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +20,8 @@ import com.google.firebase.database.ValueEventListener;
 public class inicioDoctor extends AppCompatActivity {
 
     TextView textDoctor;
+    TextView txtCedula;
+    String cedula;
     DatabaseReference referencia;
     FirebaseAuth firebaseAuth;
 
@@ -28,6 +31,8 @@ public class inicioDoctor extends AppCompatActivity {
         setContentView(R.layout.activity_inicio_doctor);
 
         textDoctor = (TextView) findViewById(R.id.textView22);
+        txtCedula = (TextView) findViewById(R.id.editText4);
+        cedula = txtCedula.toString();
         referencia = FirebaseDatabase.getInstance().getReference();
         firebaseAuth = FirebaseAuth.getInstance();
         String id = firebaseAuth.getCurrentUser().getUid();
@@ -54,8 +59,15 @@ public class inicioDoctor extends AppCompatActivity {
 
 
     public void buttonBuscar(View view){
-        Intent intent = new Intent(inicioDoctor.this, datosPaciente.class);
-        startActivity(intent);
+
+        if(cedula.isEmpty()) {
+            Toast.makeText(this, "Digite la cedula del paciente", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Intent intent = new Intent(inicioDoctor.this, datosPaciente.class);
+            intent.putExtra("dato00", cedula);
+            startActivity(intent);
+        }
     }
 
     public void buttonVerEjercicios(View view){
