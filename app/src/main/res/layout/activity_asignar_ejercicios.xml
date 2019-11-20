@@ -91,6 +91,8 @@
                 tools:layout_editor_absoluteX="59dp"
                 tools:layout_editor_absoluteY="190dp" />
 
+
+
             <CheckBox
                 android:id="@+id/checkBox1.1"
                 android:layout_width="wrap_content"
@@ -99,6 +101,11 @@
                 android:text="Ejercicio 1.1"
                 tools:layout_editor_absoluteX="89dp"
                 tools:layout_editor_absoluteY="222dp" />
+
+            <Spinner
+                android:id="@+id/spinnerEje1.1"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
 
             <CheckBox
                 android:id="@+id/checkBox1.2"
@@ -109,6 +116,12 @@
                 tools:layout_editor_absoluteX="89dp"
                 tools:layout_editor_absoluteY="261dp" />
 
+            <Spinner
+                android:id="@+id/spinnerEje1.2"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
+
             <CheckBox
                 android:id="@+id/checkBox1.3"
                 android:layout_width="wrap_content"
@@ -118,6 +131,12 @@
                 android:text="Ejercicio 1.3"
                 tools:layout_editor_absoluteX="89dp"
                 tools:layout_editor_absoluteY="302dp" />
+
+            <Spinner
+                android:id="@+id/spinnerEje1.3"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
 
             <TextView
                 android:id="@+id/textView4"
@@ -136,6 +155,11 @@
                 android:text="Ejercicio 2.1"
                 tools:layout_editor_absoluteX="89dp"
                 tools:layout_editor_absoluteY="420dp" />
+            <Spinner
+                android:id="@+id/spinnerEje2.1"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
 
             <CheckBox
                 android:id="@+id/checkBox2.2"
@@ -146,6 +170,12 @@
                 tools:layout_editor_absoluteX="89dp"
                 tools:layout_editor_absoluteY="381dp" />
 
+            <Spinner
+                android:id="@+id/spinnerEje2.2"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
+
             <TextView
                 android:id="@+id/textView31"
                 android:layout_width="wrap_content"
@@ -153,7 +183,6 @@
                 android:text="3. Codo y antebrazo"
                 tools:layout_editor_absoluteX="52dp"
                 tools:layout_editor_absoluteY="463dp" />
-
 
             <CheckBox
                 android:id="@+id/checkBox3.1"
@@ -165,6 +194,12 @@
                 tools:layout_editor_absoluteX="89dp"
                 tools:layout_editor_absoluteY="493dp" />
 
+            <Spinner
+                android:id="@+id/spinnerEje3.1"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
+
             <CheckBox
                 android:id="@+id/checkBox3.2"
                 android:layout_width="wrap_content"
@@ -173,6 +208,12 @@
                 android:text="Ejercicio 3.2"
                 tools:layout_editor_absoluteX="89dp"
                 tools:layout_editor_absoluteY="532dp" />
+
+            <Spinner
+                android:id="@+id/spinnerEje3.2"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
 
             <TextView
                 android:id="@+id/textView30"
@@ -192,6 +233,12 @@
                 tools:layout_editor_absoluteX="100dp"
                 tools:layout_editor_absoluteY="619dp" />
 
+            <Spinner
+                android:id="@+id/spinnerEje4.1"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
+
             <CheckBox
                 android:id="@+id/checkBox4.2"
                 android:layout_width="wrap_content"
@@ -200,6 +247,12 @@
                 android:text="Ejercicio 4.2"
                 tools:layout_editor_absoluteX="100dp"
                 tools:layout_editor_absoluteY="619dp" />
+
+            <Spinner
+                android:id="@+id/spinnerEje4.2"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
 
             <CheckBox
                 android:id="@+id/checkBox4.3"
@@ -210,6 +263,12 @@
                 tools:layout_editor_absoluteX="100dp"
                 tools:layout_editor_absoluteY="619dp" />
 
+            <Spinner
+                android:id="@+id/spinnerEje4.3"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
+
             <CheckBox
                 android:id="@+id/checkBox4.4"
                 android:layout_width="wrap_content"
@@ -219,6 +278,12 @@
                 tools:layout_editor_absoluteX="100dp"
                 tools:layout_editor_absoluteY="619dp" />
 
+            <Spinner
+                android:id="@+id/spinnerEje4.4"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
+
             <CheckBox
                 android:id="@+id/checkBox4.5"
                 android:layout_width="wrap_content"
@@ -227,6 +292,12 @@
                 android:text="Ejercicio 4.5"
                 tools:layout_editor_absoluteX="100dp"
                 tools:layout_editor_absoluteY="619dp" />
+
+            <Spinner
+                android:id="@+id/spinnerEje4.5"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
 
             <TextView
                 android:id="@+id/textView32"
@@ -245,6 +316,12 @@
                 tools:layout_editor_absoluteX="100dp"
                 tools:layout_editor_absoluteY="619dp" />
 
+            <Spinner
+                android:id="@+id/spinnerEje5.1"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
+
             <CheckBox
                 android:id="@+id/checkBox5.2"
                 android:layout_width="wrap_content"
@@ -253,6 +330,12 @@
                 android:text="Ejercicio 5.2"
                 tools:layout_editor_absoluteX="100dp"
                 tools:layout_editor_absoluteY="619dp" />
+
+            <Spinner
+                android:id="@+id/spinnerEje5.2"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
 
             <CheckBox
                 android:id="@+id/checkBox5.3"
@@ -263,6 +346,12 @@
                 tools:layout_editor_absoluteX="100dp"
                 tools:layout_editor_absoluteY="619dp" />
 
+            <Spinner
+                android:id="@+id/spinnerEje5.3"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
+
             <CheckBox
                 android:id="@+id/checkBox5.4"
                 android:layout_width="wrap_content"
@@ -271,6 +360,12 @@
                 android:text="Ejercicio 5.4"
                 tools:layout_editor_absoluteX="100dp"
                 tools:layout_editor_absoluteY="619dp" />
+
+            <Spinner
+                android:id="@+id/spinnerEje5.4"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
 
             <CheckBox
                 android:id="@+id/checkBox5.5"
@@ -281,6 +376,12 @@
                 tools:layout_editor_absoluteX="100dp"
                 tools:layout_editor_absoluteY="619dp" />
 
+            <Spinner
+                android:id="@+id/spinnerEje5.5"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
+
             <CheckBox
                 android:id="@+id/checkBox5.6"
                 android:layout_width="wrap_content"
@@ -289,6 +390,12 @@
                 android:text="Ejercicio 5.6"
                 tools:layout_editor_absoluteX="100dp"
                 tools:layout_editor_absoluteY="619dp" />
+
+            <Spinner
+                android:id="@+id/spinnerEje5.6"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
 
             <TextView
                 android:id="@+id/textView33"
@@ -307,6 +414,12 @@
                 tools:layout_editor_absoluteX="89dp"
                 tools:layout_editor_absoluteY="222dp" />
 
+            <Spinner
+                android:id="@+id/spinnerEje6.1"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
+
             <CheckBox
                 android:id="@+id/checkBox6.2"
                 android:layout_width="wrap_content"
@@ -316,6 +429,12 @@
                 tools:layout_editor_absoluteX="89dp"
                 tools:layout_editor_absoluteY="261dp" />
 
+            <Spinner
+                android:id="@+id/spinnerEje6.2"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
+
             <CheckBox
                 android:id="@+id/checkBox6.3"
                 android:layout_width="wrap_content"
@@ -324,6 +443,12 @@
                 android:text="Ejercicio 6.3"
                 tools:layout_editor_absoluteX="89dp"
                 tools:layout_editor_absoluteY="302dp" />
+
+            <Spinner
+                android:id="@+id/spinnerEje6.3"
+                android:layout_width="279dp"
+                android:layout_height="34dp"/>
+
 
 
         </TableLayout>

@@ -134,45 +134,45 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                             DatabaseReference medico = referencia.child("Medico").child(id).child("usuario");
 
 
-                                    paciente.addValueEventListener(new ValueEventListener() {
-                                        @Override
-                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            paciente.addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                                            if (dataSnapshot.exists()){
-                                                int pos = email.indexOf("@");//verifica el caracter donde se encuentra en el email
-                                                String user = email.substring(0,pos);// envia el email hasta donde se encuentra la posicion de la @
-                                                Toast.makeText(LogIn.this,"Hola: "+ TextEmail.getText(),Toast.LENGTH_LONG).show();
-                                                Intent intent = new Intent(LogIn.this,menuPrincipal.class);
-                                                intent.putExtra(menuPrincipal.user, user);
-                                                startActivity(intent);
-                                            }
-                                        }
+                                    if (dataSnapshot.exists()){
+                                        int pos = email.indexOf("@");//verifica el caracter donde se encuentra en el email
+                                        String user = email.substring(0,pos);// envia el email hasta donde se encuentra la posicion de la @
+                                        Toast.makeText(LogIn.this,"Hola: "+ TextEmail.getText(),Toast.LENGTH_LONG).show();
+                                        Intent intent = new Intent(LogIn.this,menuPrincipal.class);
+                                        intent.putExtra(menuPrincipal.user, user);
+                                        startActivity(intent);
+                                    }
+                                }
 
-                                        @Override
-                                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                                        }   
-                                    });
+                                }
+                            });
 
-                                    medico.addValueEventListener(new ValueEventListener() {
-                                    @Override
-                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            medico.addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                                            if (dataSnapshot.exists()){
-                                                int pos = email.indexOf("@");//verifica el caracter donde se encuentra en el email
-                                                String user = email.substring(0,pos);// envia el email hasta donde se encuentra la posicion de la @
-                                                Toast.makeText(LogIn.this,"Hola: "+ TextEmail.getText(),Toast.LENGTH_LONG).show();
-                                                Intent intent = new Intent(LogIn.this,inicioDoctor.class);
-                                                intent.putExtra(menuPrincipal.user, user);
-                                                startActivity(intent);
-                                            }
-                                        }
+                                    if (dataSnapshot.exists()){
+                                        int pos = email.indexOf("@");//verifica el caracter donde se encuentra en el email
+                                        String user = email.substring(0,pos);// envia el email hasta donde se encuentra la posicion de la @
+                                        Toast.makeText(LogIn.this,"Hola: "+ TextEmail.getText(),Toast.LENGTH_LONG).show();
+                                        Intent intent = new Intent(LogIn.this,inicioDoctor.class);
+                                        intent.putExtra(menuPrincipal.user, user);
+                                        startActivity(intent);
+                                    }
+                                }
 
-                                        @Override
-                                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                                        }
-                                    });
+                                }
+                            });
 
 
                         } else {
