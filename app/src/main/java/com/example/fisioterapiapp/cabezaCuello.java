@@ -46,6 +46,8 @@ public class cabezaCuello extends AppCompatActivity {
         intent.putExtra("dato01","Ejercicio 1.1 de la cabeza y el cuello");
         intent.putExtra("dato02","Permanezca en la posición indicada un tiempo mínimo de 20’’ y tenga en cuenta las  precauciones señaladas abajo");
         intent.putExtra("dato03","Incline la cabeza hacia atrás (mirando hacia arriba). Incline la cabeza hacia delante (mirando hacia abajo).");
+        intent.putExtra("dato04","y-1yEDrcp0I");
+
         startActivity(intent);
     }
 
@@ -55,6 +57,7 @@ public class cabezaCuello extends AppCompatActivity {
         intent.putExtra("dato01","Ejercicio 1.2 de la cabeza y el cuello");
         intent.putExtra("dato02","Permanezca en la posición indicada un tiempo mínimo de 20’’ y tenga en cuenta las  precauciones señaladas abajo");
         intent.putExtra("dato03","Incline la cabeza en dirección al hombro (como si intentara alcanzar con la oreja el hombro y sin levantar éste).");
+        intent.putExtra("dato04","TDh_b8bEIrY");
         startActivity(intent);
     }
 
@@ -64,6 +67,7 @@ public class cabezaCuello extends AppCompatActivity {
         intent.putExtra("dato01","Ejercicio 1.3 de la cabeza y el cuello");
         intent.putExtra("dato02","Permanezca en la posición indicada un tiempo mínimo de 20’’ y tenga en cuenta las  precauciones señaladas abajo");
         intent.putExtra("dato03","Gire la cabeza para mirar sobre el hombro.");
+        intent.putExtra("dato04","iPAg0S91j1s");
         startActivity(intent);
     }
 }

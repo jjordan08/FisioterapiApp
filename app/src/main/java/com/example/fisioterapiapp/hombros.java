@@ -49,6 +49,7 @@ public class hombros extends AppCompatActivity {
                 " (como levantando la mano en una clase), manteniendo el codo y el antebrazo lo más rectos posible. Mientras está en" +
                 " esta posición, respire profundamente y espire una vez en forma rítmica. Baje el brazo a la posición original " +
                 "como comenzó y repita 2-3 veces. Repita este ejercicio con el otro brazo.");
+        intent.putExtra("dato04","Gu8Yal6oVfE");
         startActivity(intent);
     }
 
@@ -60,6 +61,7 @@ public class hombros extends AppCompatActivity {
         intent.putExtra("dato03","Acuéstese de espaldas con los brazos a los lados. Gire las palmas hacia arriba. Estire un brazo y levántelo" +
                 " recto hacia fuera, hasta que llegue al lado de su cabeza (como un movimiento de títere). Vuelva el brazo a la posición original" +
                 " y repita 2-3  veces. Repita con el otro brazo. ");
+        intent.putExtra("dato04","8Wa0zX6V4yg");
         startActivity(intent);
     }
 

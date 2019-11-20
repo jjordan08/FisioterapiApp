@@ -43,6 +43,8 @@ public class manoMuneca extends AppCompatActivity {
         intent.putExtra("dato01","Ejercicio 4.1 de la mano y muñeca");
         intent.putExtra("dato02","Permanezca en la posición indicada un tiempo mínimo de 20’’ y tenga en cuenta las  precauciones señaladas abajo");
         intent.putExtra("dato03","Primero: Doble los dedos hacia la palma (haga un puño)."+'\n'+"Segundo: Estire los dedos.");
+        intent.putExtra("dato04","T8y-4OG4YjY");
+
         startActivity(intent);
     }
 
@@ -52,6 +54,7 @@ public class manoMuneca extends AppCompatActivity {
         intent.putExtra("dato01","Ejercicio 4.2 de la mano y muñeca");
         intent.putExtra("dato02","Permanezca en la posición indicada un tiempo mínimo de 20’’ y tenga en cuenta las  precauciones señaladas abajo");
         intent.putExtra("dato03","Primero: Doble todas las articulaciones del pulgar."+'\n'+"Segundo: Descanse el pulgar. ");
+        intent.putExtra("dato04","WeyZqNPAxbQ");
         startActivity(intent);
     }
 
@@ -61,6 +64,7 @@ public class manoMuneca extends AppCompatActivity {
         intent.putExtra("dato01","Ejercicio 4.3 de la mano y muñeca");
         intent.putExtra("dato02","Permanezca en la posición indicada un tiempo mínimo de 20’’ y tenga en cuenta las  precauciones señaladas abajo");
         intent.putExtra("dato03","IPrimero: Separe los dedos extendiéndolos."+'\n'+"Segundo: Junte los dedos. ");
+        intent.putExtra("dato04","vN7KCgWA3j4");
         startActivity(intent);
     }
 
@@ -70,6 +74,7 @@ public class manoMuneca extends AppCompatActivity {
         intent.putExtra("dato01","Ejercicio 4.4 de la mano y muñeca");
         intent.putExtra("dato02","Permanezca en la posición indicada un tiempo mínimo de 20’’ y tenga en cuenta las  precauciones señaladas abajo");
         intent.putExtra("dato03","Primero: Con la palma hacia arriba, mueva el pulgar hacia arriba."+'\n'+"Segundo: Doble el pulgar. Tercero: Mueva el pulgar hasta que toque el dedo meñique.");
+        intent.putExtra("dato04","vzp8f6F2Ojo");
         startActivity(intent);
     }
 
@@ -81,6 +86,7 @@ public class manoMuneca extends AppCompatActivity {
         intent.putExtra("dato03","Primero: Empiece con el brazo y muñeca en una posición cómoda, los dedos apuntando hacia el techo. " +'\n'+
                 "Segundo: Doble solamente los nudillos grandes de los dedos (excepto el pulgar), formando un ángulo de 90º con la" +
                 " palma de la mano. Suba los dedos rectos. Trate de mantener la muñeca relajada. ");
+        intent.putExtra("dato04","RRfOUAx14C4");
         startActivity(intent);
     }
 }

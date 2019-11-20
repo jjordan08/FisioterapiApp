@@ -46,6 +46,7 @@ public class tobilloPies extends AppCompatActivity {
         intent.putExtra("dato03","Primero: Doble el pie hacia arriba." + '\n' + "Segundo: Doble el pie hacia abajo. Este ejercicio debe hacerse despacio. " +
                 "Si siente como si fuera a tener un espasmo, entonces repita el primer paso y mantenga " +
                 "la posición suavemente. Luego deje de hacer el ejercicio.");
+        intent.putExtra("dato04","PAuu8aDWTCg");
         startActivity(intent);
     }
 
@@ -55,6 +56,7 @@ public class tobilloPies extends AppCompatActivity {
         intent.putExtra("dato01","Ejercicio 6.2 tobillos y pies");
         intent.putExtra("dato02","Permanezca en la posición indicada un tiempo mínimo de 20’’ y tenga en cuenta las  precauciones señaladas abajo");
         intent.putExtra("dato03","Primero: Mueva el pie con la planta hacia afuera."+'\n'+"Segundo: Mueva el pie con la planta hacia adentro. ");
+        intent.putExtra("dato04","2X7QmwPnHwc");
         startActivity(intent);
     }
 
@@ -64,6 +66,7 @@ public class tobilloPies extends AppCompatActivity {
         intent.putExtra("dato01","Ejercicio 6.3 tobillos y pies");
         intent.putExtra("dato02","Permanezca en la posición indicada un tiempo mínimo de 20’’ y tenga en cuenta las  precauciones señaladas abajo");
         intent.putExtra("dato03","Primero: Doble los dedos del pie hacia adentro."+'\n'+"Segundo: Extienda los dedos del pie hacia arriba y atrás tanto como pueda.");
+        intent.putExtra("dato04","PAuu8aDWTCg");
         startActivity(intent);
     }
 }

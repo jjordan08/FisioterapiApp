@@ -45,6 +45,7 @@ public class codoAntebrazo extends AppCompatActivity {
         intent.putExtra("dato03","Acuéstese en la cama o sobre una colchoneta con los brazos “pegados” al cuerpo y las palmas de las " +
                 "manos hacia arriba. Manteniendo el codo sobre la cama o colchoneta, flexione el codo llevando la mano tan cerca del hombro " +
                 "como pueda. Mantenga esta posición. Vuelva a la posición original. Repita 3 veces este ejercicio con cada brazo. ");
+        intent.putExtra("dato04","oxccTEE8qPM");
         startActivity(intent);
     }
 
@@ -57,6 +58,7 @@ public class codoAntebrazo extends AppCompatActivity {
                 "el antebrazo sobre la mesa). Levante el antebrazo recto. Si está  recostado, mantenga el codo y el brazo superior tocando la cama. " +
                 "Gire suavemente la mano con la palma hacia su cara, y luego gire su mano poniendo la palma hacia afuera. Repita 2-3 veces. " +
                 "Repita el ejercicio con el otro brazo.");
+        intent.putExtra("dato04","RhVuK_Dnzdo");
         startActivity(intent);
     }
 }

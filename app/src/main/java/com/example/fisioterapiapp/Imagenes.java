@@ -34,6 +34,7 @@ public class Imagenes  extends YouTubeBaseActivity implements YouTubePlayer.OnIn
     public String d1;
     public String d2;
     public String d3;
+    public String d4;
 
 
 
@@ -42,24 +43,50 @@ public class Imagenes  extends YouTubeBaseActivity implements YouTubePlayer.OnIn
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_imagenes);
 
-        youTubePlayerView=(YouTubePlayerView)findViewById(R.id.youtube_view1);
-        youTubePlayerView.initialize(claveYoutube,this);
+
 
         recibirDatos();
         cambiarImagen();
         cambiarTextos();
-        //cambiarVideo();
+
+        youTubePlayerView=(YouTubePlayerView)findViewById(R.id.youtube_view1);
+        youTubePlayerView.initialize(claveYoutube,this);
     }
+
+    public void recibirDatos(){
+        Bundle extras = getIntent().getExtras();
+        imagenNum = Integer.parseInt(extras.getString("dato00"));
+        d1 = extras.getString("dato01");
+        d2 = extras.getString("dato02");
+        d3 = extras.getString("dato03");
+        d4 = extras.getString("dato04");
+    }
+
+    public void cambiarImagen(){
+        ImageView imagen =(ImageView)findViewById(R.id.imagen);
+        imagen.setImageResource(imagenes[imagenNum]);
+    }
+
+
+
+    public void cambiarTextos(){
+
+        TextView txtSaludo = (TextView)findViewById(R.id.textoSaludo);
+        txtSaludo.setText("Hola" );
+
+        TextView txtRecomendacion = (TextView)findViewById(R.id.textoRecomendacion);
+        txtRecomendacion.setText(""+d2);
+
+        TextView txtEjercicio = (TextView)findViewById(R.id.textoEjercicio);
+        txtEjercicio.setText(""+d3);
+    }
+
 
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
 
         if(!b){
-            youTubePlayer.cueVideo("hJLtXVO9k24");
-            //youTubePlayer2.cueVideo("lWIQ7QCxp8Q");
-            //youTubePlayer3.cueVideo("DAmyax6EZD8");
-            //youTubePlayer4.cueVideo("qDXp-oMwkug");
-            //youTubePlayer5.cueVideo("5-mq5C4Vx4o");
+            youTubePlayer.cueVideo(d4);
         }
     }
 
@@ -112,32 +139,6 @@ public class Imagenes  extends YouTubeBaseActivity implements YouTubePlayer.OnIn
 
     }
 
-    public void recibirDatos(){
-        Bundle extras = getIntent().getExtras();
-        imagenNum = Integer.parseInt(extras.getString("dato00"));
-        d1 = extras.getString("dato01");
-        d2 = extras.getString("dato02");
-        d3 = extras.getString("dato03");
-    }
-
-    public void cambiarImagen(){
-        ImageView imagen =(ImageView)findViewById(R.id.imagen);
-        imagen.setImageResource(imagenes[imagenNum]);
-    }
-
-
-
-    public void cambiarTextos(){
-
-        TextView txtSaludo = (TextView)findViewById(R.id.textoSaludo);
-        txtSaludo.setText("Hola" );
-
-        TextView txtRecomendacion = (TextView)findViewById(R.id.textoRecomendacion);
-        txtRecomendacion.setText(""+d2);
-
-        TextView txtEjercicio = (TextView)findViewById(R.id.textoEjercicio);
-        txtEjercicio.setText(""+d3);
-    }
 
 
 
